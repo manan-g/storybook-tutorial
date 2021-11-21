@@ -11,19 +11,13 @@ tasks:
   - name: server
     # init is not executed for prebuilt workspaces and restarts,
     # so we should put all the heavy initialization here
-    init: >
-      cd taskbox
     command: >
       yarn storybook
 
   - name: tests
-    init: >
-      cd taskbox
     command: >
       yarn test --watchAll
 
   - name: client
-    init: >
-      cd taskbox
     command: >
       yarn start
